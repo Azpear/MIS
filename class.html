@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Class</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/class.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">EduLearn</div>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+                <div class="user-menu">
+                    <span id="username-display"></span>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="class-container">
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="video-player">
+                    <iframe id="lecture-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h1 id="class-title">Introduction to Programming</h1>
+                    <p id="class-description">Learn the basics of coding with Python in this comprehensive introductory course.</p>
+                    <div class="progress-container">
+                        <span>Progress: </span>
+                        <div class="progress-bar">
+                            <div class="progress" id="class-progress" style="width: 30%"></div>
+                        </div>
+                        <span id="progress-percent">30%</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="class-content">
+                <!-- Notes Section -->
+                <section class="notes-section">
+                    <h2>Class Notes</h2>
+                    <div class="notes-container" id="notes-container">
+                        <!-- Notes will be loaded here -->
+                    </div>
+                    <div class="add-note">
+                        <h3>Add Your Note</h3>
+                        <textarea id="new-note" placeholder="Write your notes here..."></textarea>
+                        <button id="save-note" class="btn-save">Save Note</button>
+                    </div>
+                </section>
+
+                <!-- Rating Section -->
+                <section class="rating-section">
+                    <h2>Rate This Class</h2>
+                    <div class="rating-container">
+                        <div class="star-rating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <div class="rating-feedback">
+                            <textarea id="rating-comment" placeholder="Share your thoughts about this class..."></textarea>
+                            <button id="submit-rating" class="btn-submit">Submit Rating</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/class.js"></script>
+</body>
+</html>
